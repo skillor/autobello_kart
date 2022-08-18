@@ -1,0 +1,51 @@
+{
+  "FBXASC0485FBXASC032_FBXASC032Default": {
+    "name": "FBXASC0485FBXASC032_FBXASC032Default",
+    "mapTo": "FBXASC0485FBXASC032-FBXASC032Default",
+    "class": "Material",
+    "persistentId": "8d2d15bf-ac05-4e53-a4fa-6bc68029f280",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.733453989,
+          0.708117008,
+          0.577778995,
+          1
+        ],
+        "roughnessFactor": 0.455000013,
+        "specular": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "translucentBlendOp": "None",
+    "version": 1.5
+  },
+  "MaterialFBXASC032FBXASC03525": {
+    "name": "MaterialFBXASC032FBXASC03525",
+    "mapTo": "MaterialFBXASC032FBXASC03525",
+    "class": "Material",
+    "persistentId": "13acee03-716b-41d5-90c2-1a0f4b629800",
+    "Stages": [
+      {
+        "colorMap": "kart-top",
+        "specular": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "translucentBlendOp": "None"
+  }
+}

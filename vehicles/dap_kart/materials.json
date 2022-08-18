@@ -1,0 +1,196 @@
+{
+  "kart_battery_mat": {
+    "name": "kart_battery_mat",
+    "mapTo": "kart_battery",
+    "class": "Material",
+    "persistentId": "2c795928-e11f-49a4-a7c1-63c4cf10cc09",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.634733975,
+          0.308894992,
+          0.308894992,
+          1
+        ],
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "metallicFactor": 0.186000004,
+        "roughnessFactor": 0.689999998
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "Miscellaneous",
+    "version": 1.5
+  },
+  "kart_dark_mat": {
+    "name": "kart_dark_mat",
+    "mapTo": "kart_dark",
+    "class": "Material",
+    "persistentId": "96e33b8a-8738-44d7-841a-256e5cbbab30",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          0.5
+        ],
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "vehicles/dap_kart/art/seat_c.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "pixelSpecular": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_frame_mat": {
+    "name": "kart_frame_mat",
+    "mapTo": "kart_frame",
+    "class": "material",
+    "persistentId": "6b4f137e-9714-4b1d-9788-d963516869df",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          1,
+          0.999989986,
+          0.999989986,
+          0.5
+        ],
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "vehicles/dap_kart/art/main_c.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "pixelSpecular": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "dynamicCubemap": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_metal_mat": {
+    "name": "kart_metal_mat",
+    "mapTo": "kart_metal",
+    "class": "material",
+    "persistentId": "556a0c95-7112-4bfc-9aac-31bff2f848d0",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.911150992,
+          0.911141992,
+          0.911141992,
+          0.400000006
+        ],
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "metallicFactor": 1,
+        "pixelSpecular": true,
+        "roughnessFactor": 0.303000003
+      },
+      {},
+      {},
+      {}
+    ],
+    "doubleSided": true,
+    "dynamicCubemap": true,
+    "invertBackFaceNormals": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_spark_mat": {
+    "name": "kart_spark_mat",
+    "mapTo": "kart_spark",
+    "class": "material",
+    "persistentId": "f997b1ea-17ab-4596-b90c-390bfba6f19f",
+    "Stages": [
+      {
+        "colorMap": "vehicles/dap_kart/art/blank.png",
+        "diffuseColor": [
+          0.137254909,
+          0.137254909,
+          0.137254909,
+          0.00800000038
+        ],
+        "pixelSpecular": true,
+        "specular": [
+          0.207843155,
+          0.207843155,
+          0.207843155,
+          0.00800000038
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "Miscellaneous"
+  },
+  "kart_tire_mat": {
+    "name": "kart_tire_mat",
+    "mapTo": "kart_tire",
+    "class": "Material",
+    "persistentId": "63158544-d089-4705-b277-605bf8c03f9e",
+    "Stages": [
+      {
+        "baseColorFactor": [
+          0.0621539988,
+          0.0621539988,
+          0.0621539988,
+          1
+        ],
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "pixelSpecular": true,
+        "roughnessFactor": 0.621999979,
+        "specular": [
+          0.172549024,
+          0.172549024,
+          0.172549024,
+          0.00800000038
+        ]
+      },
+      {},
+      {},
+      {}
+    ],
+    "doubleSided": true,
+    "invertBackFaceNormals": true,
+    "materialTag0": "beamng",
+    "materialTag1": "vehicle",
+    "version": 1.5
+  },
+  "kart_wheels_mat": {
+    "name": "kart_wheels_mat",
+    "mapTo": "kart_wheels",
+    "class": "Material",
+    "persistentId": "a6bb86b2-500f-4799-9668-776de80e3e18",
+    "Stages": [
+      {
+        "baseColorMap": "vehicles/dap_kart/art/blank.png",
+        "clearCoatFactor": 1,
+        "colorPaletteMap": "vehicles/dap_kart/art/wheel_c.png",
+        "instanceDiffuse": true,
+        "metallicFactor": 1,
+        "pixelSpecular": true
+      },
+      {},
+      {},
+      {}
+    ],
+    "materialTag0": "beamng",
+    "materialTag2": "vehicle",
+    "version": 1.5
+  }
+}

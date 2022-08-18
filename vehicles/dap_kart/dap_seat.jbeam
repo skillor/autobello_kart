@@ -1,0 +1,166 @@
+{
+    "dap_seat":{
+        "information":{
+            "authors":"Kirbyguy22"   
+			"name":"Seat",
+        },
+		"slotType" : "dap_seat",
+
+		"flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["seat", ["dap_seat"], [],{"pos":{"x":0.02, "y":0, "z":0}}],
+		],
+        "nodes":[
+            ["id", "posX", "posY", "posZ"],
+			{"nodeMaterial":"|NM_PLASTIC"},
+			{"frictionCoef":0.8},
+			{"nodeWeight":0.2},
+			{"group":"dap_seat"},
+			{"collision":true},
+			{"selfCollision":true},
+            ["st1l", 0.218, -0.007, 0.151],
+			["st2l", 0.184, 0.249, 0.151],
+			["st3l", 0.184, 0.326, 0.199],
+			["st4l", 0.197, 0.407, 0.425],
+			["st5l", 0.125, 0.509, 0.473],
+			["st6l", 0.125, 0.40, 0.131],
+			["st7l", 0.125, 0.323, 0.083],
+			["st8l", 0.125, -0.007, 0.083],
+			
+            ["st1r", -0.198, -0.007, 0.151],
+			["st2r", -0.164, 0.249, 0.151],
+			["st3r", -0.164, 0.326, 0.199],
+			["st4r", -0.177, 0.407, 0.425],
+			["st5r", -0.105, 0.509, 0.473],
+			["st6r", -0.105, 0.40, 0.131],
+			["st7r", -0.105, 0.323, 0.083],
+			["st8r", -0.105, -0.007, 0.083],
+			["stsupp", 0.02, 0.23, 0.28],
+            //BNEnodes
+   
+        ],
+        "beams":[
+            ["id1:", "id2:"],
+			//{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},//--bumper_F--
+          //--FRONT BUMPER--
+			{"beamSpring":3000,"beamDamp":100},
+			{"beamDeform":2500000,"beamStrength":600000},
+			{"deformationTriggerRatio":0.005},
+			{"disableTriangleBreaking":true}
+			["st1l","st2l"],
+			["st2l","st3l"],
+			["st3l","st4l"],
+			["st4l","st5l"],
+			["st5l","st6l"],
+			["st6l","st7l"],
+			["st7l","st8l"],
+			["st8l","st1l"],
+			
+			["st1l","st7l"],
+			["st2l","st8l"],
+			["st2l","st7l"],
+			["st3l","st6l"],
+			["st2l","st6l"],
+			["st3l","st7l"],
+			
+			["st4l","st6l"],
+			["st3l","st5l"],
+			
+			["st1r","st2r"],
+			["st2r","st3r"],
+			["st3r","st4r"],
+			["st4r","st5r"],
+			["st5r","st6r"],
+			["st6r","st7r"],
+			["st7r","st8r"],
+			["st8r","st1r"],
+			
+			["st1r","st7r"],
+			["st2r","st8r"],
+			["st2r","st7r"],
+			["st3r","st6r"],
+			["st2r","st6r"],
+			["st3r","st7r"],
+			
+			["st4r","st6r"],
+			["st3r","st5r"],
+			
+			["st8l","st8r"],
+			["st7l","st7r"],
+			["st6l","st6r"],
+			["st5l","st5r"],
+			
+			["st5l","st6r"],
+			["st6l","st5r"],
+			
+			["st7l","st6r"],
+			["st6l","st7r"],
+			
+			["st8l","st8r"],
+			["st8l","st7r"],
+			
+			{"beamSpring":6000,"beamDamp":10},
+			["st1l", "stsupp"],
+			["st2l", "stsupp"],
+			["st3l", "stsupp"],
+			["st4l", "stsupp"],
+			["st5l", "stsupp"],
+			["st6l", "stsupp"],
+			["st7l", "stsupp"],
+			["st8l", "stsupp"],
+			
+            ["st1r", "stsupp"],
+			["st2r", "stsupp"],
+			["st3r", "stsupp"],
+			["st4r", "stsupp"],
+			["st5r", "stsupp"],
+			["st6r", "stsupp"],
+			["st7r", "stsupp"],
+			["st8r", "stsupp"],
+			
+			{"beamPrecompression":0.99},
+			["st4l", "st8l"],
+			["st5l", "st1l"],
+			
+			["st4r", "st8r"],
+			["st5r", "st1r"],
+			{"beamPrecompression":1},
+            //BNEbeams
+			{"beamSpring":6510,"beamDamp":150},
+			{"beamDeform":6800,"beamStrength":8000},
+			{"deformationTriggerRatio":0.5},
+			{"breakGroup":"seat"},
+			["111", "st4r"],
+			["111", "st3r"],
+			["111", "st2r"],
+			["111", "st1r"],
+			["111", "st8r"],
+			
+			["110", "st4l"],
+			["110", "st3l"],
+			["110", "st2l"],
+			["110", "st1l"],
+			["110", "st8l"],
+			
+			["1", "st1r"],
+			["1", "st8r"],
+			["1", "st2r"],
+			["1", "st7r"],
+			
+			["16", "st1l"],
+			["16", "st8l"],
+			["16", "st2l"],
+			["16", "st7l"],
+			
+			["14", "st5l"],
+			["14", "st5r"],
+        ],
+        "triangles":[
+            ["id1:", "id2:", "id3:"],
+
+            //BNEtriangles
+   
+   
+        ],
+   }
+}

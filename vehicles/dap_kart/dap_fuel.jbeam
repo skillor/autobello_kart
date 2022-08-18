@@ -1,0 +1,112 @@
+{
+    "dap_fuel":{
+        "information":{
+            "authors":"Kirbyguy22"   
+			"name":"Fuel Tank",
+        },
+		"slotType" : "dap_fuel",
+
+		"flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+        ["petrol", ["fuel"], [],{"pos":{"x":0.0, "y":0, "z":0}}],
+		],
+		
+		"variables": [
+			["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+			["$fuel", "range", "L", "Chassis", 5, 0, 5, "Fuel Volume", "Initial fuel volume", {"stepDis":0.1}]
+		],
+		
+		"energyStorage": [
+			["type", "name"],
+			["fuelTank", "mainTank"],
+		],
+		"mainTank": {
+			"energyType":"gasoline",
+			"fuelCapacity": 5,
+			"startingFuelCapacity": "$fuel",
+			"fuel": {"[engineGroup]:":["fuel"]},
+			"breakTriggerBeam": "fuelTank",
+		},
+        "nodes":[
+            ["id", "posX", "posY", "posZ"],
+			{"nodeMaterial":"|NM_PLASTIC"},
+			{"frictionCoef":0.8},
+			{"nodeWeight":0.4},
+			{"group":"fuel"},
+			{"engineGroup":["fuel"]},
+			{"collision":true},
+			{"selfCollision":false},
+            ["fu0L", 0.0828, -0.0326, 0.1444],
+			["fu1L", 0.0828, -0.1393, 0.0703],
+			["fu2L", 0.0828, -0.1629, 0.3306],
+			["fu3L", 0.0828, -0.2687, 0.2565],	
+            ["fu0R", -0.0828, -0.0326, 0.1444],
+			["fu1R", -0.0828, -0.1393, 0.0703],
+			["fu2R", -0.0828, -0.1629, 0.3306],
+			["fu3R", -0.0828, -0.2687, 0.2565],	
+            //BNEnodes
+   
+        ],
+        "beams":[
+            ["id1:", "id2:"],
+			{"beamSpring":3000,"beamDamp":100},
+			{"beamDeform":2000,"beamStrength":6000},
+			{"disableTriangleBreaking":true}
+			{"breakGroup":"fuelTank"},
+            ["fu3L", "fu3R"],
+            ["fu2L", "fu2R"],
+            ["fu0L", "fu0R"],
+            ["fu1L", "fu1R"],
+            ["fu1L", "fu3L"],
+            ["fu2L", "fu0L"],
+            ["fu0R", "fu2R"],
+            ["fu1R", "fu3R"],
+            ["fu1L", "fu0L"],
+            ["fu3L", "fu2L"],
+            ["fu3R", "fu2R"],
+            ["fu2L", "fu0R"],
+            ["fu0L", "fu2R"],
+            ["fu2L", "fu1L"],
+            ["fu3L", "fu0L"],
+            ["fu3L", "fu1R"],
+            ["fu3R", "fu1L"],
+            ["fu3R", "fu0R"],
+            ["fu2R", "fu1R"],
+            ["fu3L", "fu2R"],
+            ["fu3R", "fu2L"],
+            ["fu0L", "fu1R"],
+            ["fu1L", "fu0R"],
+            ["fu0L", "fu3R"],
+            ["fu1L", "fu2R"],
+            ["fu0R", "fu3L"],
+            ["fu1R", "fu2L"],
+			{"breakGroup":""},
+			{"beamSpring":12000,"beamDamp":100},
+			{"beamDeform":1000,"beamStrength":2000},
+            ["fu2L", "steertop"],
+            ["fu2R", "steertop"],
+            ["fu0L", "steertop"],
+            ["fu0R", "steertop"],
+            ["fu0L", "7"],
+            ["fu0R", "7"],
+            ["fu1L", "8"],
+            ["fu1R", "2"],
+            ["fu0L", "16"],
+            ["fu0R", "1", {"name":"fuelTank","containerBeam":"fuelTank"}],
+            ["fu3L", "10"],
+            ["fu3R", "10"],
+            ["fu1L", "25"],
+            ["fu1R", "19"],
+            ["fu2L", "7"],
+            ["fu2R", "7"],
+
+        ],
+        "triangles":[
+            ["id1:", "id2:", "id3:"],
+
+            //BNEtriangles
+   
+   
+        ],
+   }
+}

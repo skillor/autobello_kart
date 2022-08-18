@@ -1,0 +1,15 @@
+{
+    "dap_kart":{
+        "information":{
+            "authors":"Kirbyguy22"      
+			"name":"Formula Kart Classic",
+        },
+		
+		"slotType" : "main",
+		
+		"slots": [
+			["type", "default", "description"]
+			["dap_kart_chassis","dap_kart_chassis", "Frame",{"coreSlot":true}],
+		],
+	}
+}

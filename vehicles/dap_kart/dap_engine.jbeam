@@ -1,0 +1,251 @@
+{
+    "dap_engine_100cc":{
+        "information":{
+            "authors":"Kirbyguy22"   
+			"name":"100cc Two-stroke Kart Engine",
+        },
+		"slotType" : "dap_engine",
+
+		"slots": [
+			["type", "default", "description"]
+			["dap_powertrain","dap_powertrain_default", "Powertrain"],
+			["dap_speed_limiter","dap_speed_limiter_default", "Speed Limiter"],
+		],
+
+		"powertrain": [
+            ["type", "name", "inputName", "inputIndex"]
+            ["combustionEngine", "mainEngine", "dummy", 0]
+        ],
+
+		"flexbodies": [
+        ["mesh", "[group]:", "nonFlexMaterials"],
+			["engine", ["engine"], [],{"pos":{"x":0, "y":0, "z":0.07}, "rot":{"x":0, "y":0, "z":0}}],
+			["exhaust", ["exhaust"], [],{"pos":{"x":0, "y":0, "z":0.0}, "rot":{"x":0, "y":0, "z":0}}],
+		],
+		
+        "nodes":[
+            ["id", "posX", "posY", "posZ"],
+			{"nodeMaterial":"|NM_PLASTIC"},
+			{"frictionCoef":0.7},
+			{"group":"engine"},
+			{"collision":true},
+			{"selfcollision":true},
+			{"nodeWeight":1},
+			{"engineGroup":"engine_block"},
+			["eng1", -0.225, 0.3643, 0.083],
+			["eng2", -0.328, 0.3643, 0.083],
+			["eng3", -0.328, 0.492, 0.083],
+			["eng4", -0.225, 0.492, 0.083],
+			
+			["eng1t", -0.19, 0.32, 0.36],
+			["eng2t", -0.363, 0.32, 0.36],
+			["eng3t", -0.363, 0.535, 0.36, {"isExhaust":true}],
+			["eng4t", -0.19, 0.535, 0.36],
+            //BNEnodes
+   
+        ],
+        "beams":[
+            ["id1:", "id2:"],
+			//engine
+			{"beamSpring":32000,"beamDamp":20},
+			{"beamDeform":900000,"beamStrength":"FLT_MAX"},
+			{"disableMeshBreaking":true},
+			["eng1", "eng2"],
+			["eng2", "eng3"],
+			["eng3", "eng4"],
+			["eng4", "eng1"],
+			["eng1", "eng3"], 
+			["eng2", "eng4"], 
+			
+			["eng1t", "eng2t"],
+			["eng2t", "eng3t"],
+			["eng3t", "eng4t"],
+			["eng4t", "eng1t"],
+			["eng1t", "eng3t"], 
+			["eng2t", "eng4t"], 
+			
+			["eng1", "eng1t"],
+			["eng2", "eng2t"],
+			["eng3", "eng3t"],
+			["eng4", "eng4t"],
+			
+			["eng1", "eng2t"],
+			["eng2", "eng3t"],
+			["eng3", "eng4t"],
+			["eng4", "eng1t"],
+			
+			["eng1t", "eng2"],
+			["eng2t", "eng3"],
+			["eng3t", "eng4"],
+			["eng4t", "eng1"],
+			
+			["eng1", "eng3t"], 
+			["eng2", "eng4t"], 
+			
+			{"beamSpring":50000,"beamDamp":20},
+			["exh1","exh4"],
+			["exh4","exh7"],
+			["exh1","exh7"],
+			["exh2","exh5"],
+			["exh5","exh8"],
+			["exh2","exh8"],
+			["exh3","exh6"],
+			["exh6","exh9"],
+			["exh3","exh9"],
+			["exh4","exh5", {"isExhaust":true}],["exh5","exh6"],
+			["exh7","exh8"],["exh8","exh9"],
+			["exh1","exh2"],["exh2","exh3"],
+			
+			["exh4","exh8"],["exh4","exh2"],
+			["exh7","exh5"],["exh7","exh2"],
+			["exh1","exh5"],["exh1","exh8"],
+			
+			["exh5","exh9"],["exh5","exh3"],
+			["exh8","exh6"],["exh8","exh3"],
+			["exh2","exh6"],["exh2","exh9"],
+			["exh1","exh3"],["exh7","exh9"],["exh6","exh4"],
+			["exhtip","exh2"],["exh5","exhtip", {"isExhaust":true}],["exhtip","exh8"],
+			["32","exh3"],["32","exh6"],["32","exh9"],
+			{"beamSpring":10000,"beamDamp":20},
+			["exhtip","exh3"],
+			["exhtip","exh6"],
+			["exhtip","exh9"],
+			//exhaust engine attach
+			{"beamSpring":25000,"beamDamp":20},
+			{"beamDeform":2000,"beamStrength":3000},
+			["exh7","eng4t"],
+			["exh7","eng3t"],
+			["exh4","eng4t"],
+			["eng3t","exh4", {"isExhaust":true}],
+			["exh1","eng4t"],
+			["exh1","eng3t"],
+			["exh1","eng4"],
+			["exh1","eng3"],
+			["exh2","0"],
+			["exh5","0"],
+			["exh8","0"],
+			["exh8","eng4t"],
+			["exh8","eng3t"],
+			["exh5","eng4t"],
+			["exh5","eng3t"],
+			["exh2","eng4t"],
+			["exh2","eng3t"],
+			["exh2","eng4"],
+			["exh2","eng3"],
+			["exh5","15"],
+			["exh3","15"],
+			["exh6","15"],
+			["exh9","15"],
+			["exh9","0"],
+			{"beamType":"|NORMAL", "beamLongBound":1.0, "beamShortBound":1.0},
+			{"beamSpring":20000,"beamDamp":400},
+			{"beamDeform":4000,"beamStrength":5000},
+			//engine mount
+			["eng1", "7"],
+			["eng1", "24"],
+			["eng1", "1"],
+			["eng1", "18"],
+			["eng1", "14"],
+			["eng1", "31"],
+			["eng2", "7"],
+			["eng2", "24"],
+			["eng2", "1"],
+			["eng2", "18"],
+			["eng2", "14"],
+			["eng2", "31"],
+			["eng3", "7"],
+			["eng3", "24"],
+			["eng3", "1"],
+			["eng3", "18"],
+			["eng3", "14"],
+			["eng3", "31"],
+			["eng4", "7"],
+			["eng4", "24"],
+			["eng4", "1"],
+			["eng4", "18"],
+			["eng4", "14"],
+			["eng4", "31"],
+			["eng1", "111"],
+			["eng2", "111"],
+			["eng3", "111"],
+			["eng4", "111"],
+			
+
+        ],
+
+		"mainEngine": {
+            
+            "torque":[
+                ["rpm", "torque"]
+                [0,       0],
+                [500,    8],
+                [1000,  8],
+                [2000,  8],
+                [3000,  8],
+                [4000,  8],
+                [5000,  9],
+                [6000,  10],
+                [7000,  11],
+                [8000,   12],
+                [10000,   15],
+                [11000,   14],
+                [12000,   12],
+                [13000,   10],
+                [14000,   8],
+                [15000,   7],
+                [16000,   6],
+                [16100,   0]
+            ],
+     
+            "engineBlock": {"[engineGroup]:":["engine_block"]},
+            "energyStorage": "mainTank",
+            "requiredEnergyType":"gasoline",
+            
+            "idleRPM":2000,
+            "maxRPM":16100,
+            "inertia":0.006,
+            "friction":1,
+            "dynamicFriction":0.0012,
+            "thermalsEnabled":true,
+            "engineBlockMaterial":"aluminium", //"aluminum", "aluminium", "iron"
+            "isAirCooledOnly":true,
+            "engineBlockAirCoolingEfficiency":10,
+            "engineBlockAirflowCoef":2,
+            "oilVolume":4, //Litres
+            "particulates":0.05,
+            "idleParticulates":0.025,
+    
+                //engine durability
+            "cylinderWallTemperatureDamageThreshold":150, //Cylinder temp (C) over which damage starts to occur to rings
+            "headGasketDamageThreshold":1500000, //Durability of headgasket
+            "pistonRingDamageThreshold":1500000, //Durability of headgasket
+            "connectingRodDamageThreshold":2000000, //Durability of connecting rods
+            "burnEfficiency":[
+                [0, 0.12],
+                [0.05, 0.26],
+                [0.4, 0.42],
+                [0.7, 0.47],
+                [1, 0.35],
+            ],
+            "soundConfig": "soundConfig",
+        },
+    
+        "soundConfig": {
+            "sampleName": "kg22_kart",
+            "mainGain": -8,
+            "maxLoadMix": 1,
+            "minLoadMix": 0,
+            "onLoadGain":1,
+            "offLoadGain":0.55,
+            "eqLowGain": -5,
+            "eqLowFreq": 150,
+            "eqLowWidth": 0,
+            "eqHighGain": -5,
+            "eqHighFreq": 6000,
+            "eqHighWidth": 0,
+            "lowCutFreq":90,
+            "highCutFreq":12000,
+            "eqFundamentalGain": -15,
+        }
+   }
+}

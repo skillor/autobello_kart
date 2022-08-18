@@ -1,0 +1,90 @@
+{
+    "dap_powertrain_default":{
+        "information":{
+            "authors":"skillor",
+			"name":"Default Powertrain",
+        },
+		"slotType" : "dap_powertrain",
+
+		"powertrain" : [
+            ["type", "name", "inputName", "inputIndex"],
+            ["frictionClutch", "clutch", "mainEngine", 1],
+            ["manualGearbox", "gearbox", "clutch", 1],
+
+            ["differential", "myRearDiff", "gearbox", 1],
+            ["shaft", "myAxleShaft1", "myRearDiff", 1, {"connectedWheel":"RL"}]
+            ["shaft", "myAxleShaft2", "myRearDiff", 2, {"connectedWheel":"RR", "electricsName":"axlerr"}]
+        ],
+
+        "gearbox": {
+            //https://wiki.beamng.com/ManualGearbox
+            //"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
+			"gearRatios":[-1, 0, 1],
+			"friction": 0, //Constant friction torque on input shaft
+		},
+        "clutch": {
+            //"thermalsEnabled":true
+            //"clutchMass":10, //Thermal mass representing clutch disc and PP/Clutch surfaces
+            //"coolingCoef":1, //Multiplier to tweak how fast it cools
+            //"warningTemp":200, //Temp for UI warning
+            //"maxSafeClutchTemp":300, //Temp after which torque limit decreases (but may recover if left to cool)
+            //"clutchOverheatRange":100, //Additional temp before clutch is pretty wrecked and won't recover much
+            //"maxClutchTemp":500, //Clutch will never recover at all if it hits this temp
+        },
+
+
+		"vehicleController":
+		{
+		     //manual transmission useful values
+			"clutchLaunchStartRPM":1708.7450739421, //RPM where launching behavior starts
+			"clutchLaunchTargetRPM":2208.7450739421, //RPM it tries to maintain while launching
+			"transmissionShiftDelay":0.2, //Time taken in between clutching actions
+			"revMatchThrottle":0.49132446952872, //Controls shift rev matching assist. Reduce this value to as much as 0.25 for high powered engines
+            "clutchInRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+            "clutchOutRate":10, //Controls shift assist clutching speed (value of 5 will be take 1/5 seconds to complete)
+		},
+
+        "myRearDiff": {
+            "diffType":"locked",
+            "lockTorque":10000, 
+            "gearRatio":8, 
+            "friction":1,
+        },
+    },
+
+    "dap_powertrain_realistic":{
+        "information":{
+            "authors":"Kirbyguy22",
+			"name":"Realistic Powertrain",
+        },
+		"slotType" : "dap_powertrain",
+
+        "powertrain": [
+            ["type", "name", "inputName", "inputIndex"]
+            ["viscousClutch", "myViscousClutch", "mainEngine", 1]
+            ["shaft", "myDriveshaft", "myViscousClutch", 1 ,{"electricsName":"driveshaft_R"}]
+            ["differential", "myRearDiff", "myDriveshaft", 1]
+            ["shaft", "myAxleShaft1", "myRearDiff", 1, {"connectedWheel":"RL"}]
+            ["shaft", "myAxleShaft2", "myRearDiff", 2, {"connectedWheel":"RR", "electricsName":"axlerr"}]
+        ],
+    
+        "myViscousClutch": {
+            //"thermalsEnabled":true
+            //"clutchMass":10, //Thermal mass representing clutch disc and PP/Clutch surfaces
+            //"coolingCoef":1, //Multiplier to tweak how fast it cools
+            //"warningTemp":200, //Temp for UI warning
+            //"maxSafeClutchTemp":300, //Temp after which torque limit decreases (but may recover if left to cool)
+            //"clutchOverheatRange":100, //Additional temp before clutch is pretty wrecked and won't recover much
+            //"maxClutchTemp":500, //Clutch will never recover at all if it hits this temp
+            "cutInRPM":2200,
+            "stallRPM":600,
+        },
+        
+        "myRearDiff": {
+            "diffType":"locked",
+            "lockTorque":10000, 
+            "gearRatio":8, 
+            "friction":1,
+        },
+    }
+}

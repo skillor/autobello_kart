@@ -1,0 +1,19 @@
+{
+    "header" : {
+        "version" : 1
+    },
+    "eventName" : "event:>Engine>default",
+    "samples" : 
+    [
+        [
+            ["art/sound/engine/kart/ex_kart_idle.wav", 2306],
+            ["art/sound/engine/kart/ex_kart_off_mid.wav", 7500],
+            ["art/sound/engine/kart/ex_kart_off_max.wav", 14000]
+        ],
+        [
+            ["art/sound/engine/kart/ex_kart_idle.wav", 2306],
+	    ["art/sound/engine/kart/ex_kart_on_low.wav", 2700],
+	    ["art/sound/engine/kart/ex_kart_on_high.wav", 9960]
+        ]
+    ]
+}
