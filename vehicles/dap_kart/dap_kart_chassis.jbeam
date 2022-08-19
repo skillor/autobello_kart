@@ -1,7 +1,7 @@
 {
     "dap_kart_chassis":{
         "information":{
-            "authors":"Kirbyguy22"      
+            "authors":"Kirbyguy22",
 			"name":"Kart Frame",
         },
 		
@@ -10,6 +10,7 @@
 		"slots": [
 			["type", "default", "description"]
 			["dap_seat","dap_seat", "Seat"],
+			["dap_bumper_ring","dap_bumper_ring", "Bumper Ring"],
 			["dap_fuel","dap_fuel", "Fuel Tank"],
 			["dap_engine", "dap_engine_100cc", "Engine"],
 		],
@@ -112,7 +113,7 @@
             ["24", -0.00000, 0.13480, 0.04900],
 			["steertop", 0, -0.09163, 0.45141],
 			
-			{"group":"ref"}
+			{"group":"ref"},
 			{"collision":false},
 			{"selfcollision":false},
 			{"nodeWeight":0.15},

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.2.1 commit date:2022-07-05, commit time:15:44, hash:a2d59b2dac9e</authoring_tool>
+    </contributor>
+    <created>2022-08-19T17:46:42</created>
+    <modified>2022-08-19T17:46:42</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="Material-material" name="Material">
+      <instance_effect url="#Material-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="bumper_ring-mesh" name="bumper_ring">
+      <mesh>
+        <source id="bumper_ring-mesh-positions">
+          <float_array id="bumper_ring-mesh-positions-array" count="96">0 -0.8950393 0.08615875 0 -0.7950692 0.0553323 0 -0.8950393 0.2463671 0 -0.7950692 0.2819105 0 0.7920798 0.0438894 0 0.8876075 0.07479268 0 0.7920798 0.2704717 0 0.8876075 0.2335404 0.4591576 -0.9014701 0.08797585 0.5657278 -0.7521469 0.05552995 0.6374356 -0.7617533 0.08797585 0.4591576 -0.9014701 0.2492675 0.5657278 -0.7521469 0.2817124 0.6374356 -0.7617533 0.2492675 0.6103889 0.7511769 0.04409205 0.5812407 0.896056 0.07653868 0.7377082 0.7023612 0.07653868 0.6239926 0.7511769 0.2702693 0.5812407 0.896056 0.2378234 0.7377082 0.7023612 0.2378234 -0.4591576 -0.9014701 0.08797585 -0.5657278 -0.7521469 0.05552995 -0.6374356 -0.7617533 0.08797585 -0.4591576 -0.9014701 0.2492675 -0.5657278 -0.7521469 0.2817124 -0.6374356 -0.7617533 0.2492675 -0.6103889 0.7511769 0.04409205 -0.5812407 0.896056 0.07653868 -0.7377082 0.7023612 0.07653868 -0.6239926 0.7511769 0.2702693 -0.5812407 0.896056 0.2378234 -0.7377082 0.7023612 0.2378234</float_array>
+          <technique_common>
+            <accessor source="#bumper_ring-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="bumper_ring-mesh-normals">
+          <float_array id="bumper_ring-mesh-normals-array" count="192">0.9976631 -0.06832671 0 0.0173434 -0.2241041 -0.974411 0.3274696 -0.4178495 -0.8474465 -0.9992499 0.03872817 0 -0.07565349 0.9971342 0 0.6168417 -0.7870873 0 0.4080805 -0.03507453 -0.912272 0.01516139 0.2214213 -0.9750604 0.3335334 0.2694298 -0.9034175 0.3808599 0.3076605 0.8719465 -0.01400423 -0.999902 0 -0.06540805 -0.9978508 0.003934204 0.4098078 -0.02093845 0.9119316 0.3274621 -0.4178407 0.8474538 -0.01453369 0.9998944 0 0.7778986 0.6283899 0 -0.01064294 -0.3349783 0.9421658 -0.01211327 0.3605667 0.9326549 -0.9976631 -0.06832683 0 -0.0173434 -0.2241041 -0.974411 -0.3274696 -0.4178495 -0.8474465 0.9992499 0.03872817 0 0.07565349 0.9971342 0 -0.6168417 -0.7870873 0 -0.2416788 -0.01456183 -0.9702471 -0.01516139 0.2214214 -0.9750604 -0.3335334 0.2694298 -0.9034175 -0.3808599 0.3076605 0.8719465 0.01400429 -0.999902 0 0.06540805 -0.9978508 0.003934264 -0.2730786 -0.003261208 0.9619862 -0.3274621 -0.4178407 0.8474538 0.01453369 0.9998944 0 -0.7778986 0.6283899 0 -0.01734381 -0.2240983 0.9744123 0.01211327 0.3605667 0.9326549 0.9976631 -0.06832683 0 -3.4529e-4 -0.2946662 -0.9556003 -0.9977439 0.03009778 0.06001043 -0.07565349 0.9971342 0 0.616842 -0.7870871 0 0.2416788 -0.01456183 -0.9702471 -0.001615762 0.3077949 -0.9514514 -0.01400429 -0.999902 0 -0.06686115 -0.9977624 0 0.2730786 -0.003261208 0.9619862 -0.01453369 0.9998944 0 0.7778984 0.62839 0 0.01734381 -0.2240983 0.9744123 0.01491445 0.2227028 0.9747723 -0.9976631 -0.06832671 0 3.45293e-4 -0.2946662 -0.9556003 0.9977439 0.03009784 0.06001043 0.07565349 0.9971342 0 -0.616842 -0.7870871 0 -0.4080805 -0.03507453 -0.912272 0.001615762 0.3077949 -0.9514514 0.01400423 -0.999902 0 0.06686115 -0.9977624 0 -0.4098078 -0.02093845 0.9119316 0.01453369 0.9998944 0 -0.7778984 0.62839 0 0.01064294 -0.3349783 0.9421658 -0.01491445 0.2227028 0.9747723</float_array>
+          <technique_common>
+            <accessor source="#bumper_ring-mesh-normals-array" count="64" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="bumper_ring-mesh-vertices">
+          <input semantic="POSITION" source="#bumper_ring-mesh-positions"/>
+        </vertices>
+        <triangles material="Material-material" count="64">
+          <input semantic="VERTEX" source="#bumper_ring-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#bumper_ring-mesh-normals" offset="1"/>
+          <p>10 0 19 0 13 0 8 1 1 1 9 1 8 2 9 2 10 2 17 3 9 3 12 3 12 4 1 4 3 4 10 5 11 5 8 5 9 6 16 6 10 6 4 7 15 7 14 7 14 8 15 8 16 8 18 9 17 9 19 9 8 10 2 10 0 10 6 11 14 11 17 11 19 12 12 12 13 12 11 13 13 13 12 13 7 14 15 14 5 14 18 15 16 15 15 15 11 16 3 16 2 16 6 17 18 17 7 17 22 18 31 18 28 18 1 19 20 19 21 19 20 20 22 20 21 20 21 21 29 21 24 21 24 22 1 22 21 22 23 23 22 23 20 23 21 24 28 24 26 24 27 25 4 25 26 25 26 26 28 26 27 26 30 27 31 27 29 27 20 28 2 28 23 28 26 29 6 29 29 29 31 30 24 30 29 30 23 31 24 31 25 31 27 32 7 32 5 32 28 33 30 33 27 33 23 34 3 34 24 34 30 35 6 35 7 35 10 36 16 36 19 36 8 37 0 37 1 37 17 38 14 38 9 38 12 39 9 39 1 39 10 40 13 40 11 40 9 41 14 41 16 41 4 42 5 42 15 42 8 43 11 43 2 43 6 44 4 44 14 44 19 45 17 45 12 45 7 46 18 46 15 46 18 47 19 47 16 47 11 48 12 48 3 48 6 49 17 49 18 49 22 50 25 50 31 50 1 51 0 51 20 51 21 52 26 52 29 52 24 53 3 53 1 53 23 54 25 54 22 54 21 55 22 55 28 55 27 56 5 56 4 56 20 57 0 57 2 57 26 58 4 58 6 58 31 59 25 59 24 59 27 60 30 60 7 60 28 61 31 61 30 61 23 62 2 62 3 62 30 63 29 63 6 63</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers/>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="bumper_ring" name="bumper_ring" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#bumper_ring-mesh" name="bumper_ring">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material-material" target="#Material-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
