@@ -10,6 +10,7 @@
 		"slots": [
 			["type", "default", "description"]
 			["dap_seat","dap_seat", "Seat"],
+			["dap_flag_pole","dap_flag_pole", "Flag Pole"],
 			["dap_bumper_ring","dap_bumper_ring", "Bumper Ring"],
 			["dap_fuel","dap_fuel", "Fuel Tank"],
 			["dap_engine", "dap_engine_100cc", "Engine"],

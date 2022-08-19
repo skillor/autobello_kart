@@ -1,0 +1,31 @@
+{
+    "dap_flag_pole":{
+        "information":{
+            "authors":"skillor",
+            "name":"Flag Pole",
+        },
+        "slotType":"dap_flag_pole",
+
+        "slots": [
+			["type", "default", "description"]
+			["dap_flag_banner","dap_flag_banner", "Flag Banner"],
+		],
+
+        "flexbodies" :[     
+            ["mesh", "[group]:","nonFlexMaterials"],
+            ["flag_pole", ["frame"], []],
+        ],
+    },
+    "dap_flag_banner":{
+        "information":{
+            "authors":"skillor",
+            "name":"Flag Banner",
+        },
+        "slotType":"dap_flag_banner",
+
+        "flexbodies" :[     
+            ["mesh", "[group]:","nonFlexMaterials"],
+            ["flag_banner", ["frame"], []],
+        ],
+    },
+}

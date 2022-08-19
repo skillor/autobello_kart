@@ -1,10 +1,13 @@
 {
-    "Name":"Formula Kart Classic",
-    "Brand":"Autobello",
-  "Author":"Kirbyguy22",
-  "Country":"Italy",
-    "Type":"Car",
-  "Body Style":"Kart",
-    "Years":{"min":1980, "max":1990},
-    "Derby Class":"100cc Kart",
+  "Name": "Formula Kart Classic",
+  "Brand": "Autobello",
+  "Author": "Kirbyguy22",
+  "Country": "Italy",
+  "Type": "Car",
+  "Body Style": "Kart",
+  "Years": {
+    "min": 1980,
+    "max": 1990
+  },
+  "Derby Class": "100cc Kart"
 }
