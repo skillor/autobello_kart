@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Zip Mod
-        run: zip -r autobello_kart.zip . -x '*.git*'
+        run: zip -r autobello_kart.zip . -x '*.git*' '*.md'
       - name: Add mod zip to release
         uses: softprops/action-gh-release@v1
         with:
