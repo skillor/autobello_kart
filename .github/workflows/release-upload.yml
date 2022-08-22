@@ -1,0 +1,21 @@
+name: Release Upload Mod
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Zip Mod
+        run: zip -r autobello_kart.zip . -x '*.git*'
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: autobello_kart.zip
