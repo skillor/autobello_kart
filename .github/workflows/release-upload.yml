@@ -13,8 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Zip Mod
-        run: zip -r autobello_kart.zip . -x '*.git*'
+        run: zip -r autobello_kart.zip . -x
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
