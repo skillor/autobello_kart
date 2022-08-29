@@ -982,10 +982,7 @@
         {"fullLoadCoef":1.55},
         {"softnessCoef":1},
 		
-
-		
-		["RR", "wheel_RR", "tire_RR", "01", "02", 9999, "116", -1,  {"speedo":true, "nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
-		{"brakeTorque":"$=$brakepressure*300"}, //Rate of brake torque (Nm) increase per input (input is 0 to 1). If there is no knee point, it also indicates the maximum brake torque.
+		{"brakeTorque":"$=$brakepressure*150"}, //Rate of brake torque (Nm) increase per input (input is 0 to 1). If there is no knee point, it also indicates the maximum brake torque.
         {"brakeInputSplit":1}, //Creates a knee point in brake torque rate (value of 0.5 means knee occurs at half brake input)
         {"brakeSplitCoef":1}, //Reduces or increases the brake torque rate after the knee point. Value of 0.5 means brake torque will rise at half the rate defined by brakeTorque.
         {"parkingTorque":0}, //Maximum parking brake torque
@@ -1000,6 +997,7 @@
         {"brakeVentingCoef":1}, //Cooling multiplier (1 for typical unducted brakes)
         //brake sounds
         {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0},
+        ["RR", "wheel_RR", "tire_RR", "01", "02", 9999, "00", -1,  {"speedo":true, "nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
         ["RL", "wheel_RL", "tire_RL", "114", "115", 9999, "116", 1, {"nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
     ],
 	
