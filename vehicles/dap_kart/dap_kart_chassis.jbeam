@@ -11,11 +11,11 @@
 			["type", "default", "description"]
 			["dap_seat","dap_seat", "Seat"],
 			["dap_flag_pole","dap_flag_pole", "Flag Pole"],
-			["dap_bumper_ring","dap_bumper_ring", "Bumper Ring"],
+			["dap_bumper_ring","dap_bumper_ring", "Bumper Ring" , {"nodeOffset":{"x":0, "y":0, "z":0.04}}],
 			["dap_fuel","dap_fuel", "Fuel Tank"],
 			["dap_engine", "dap_engine_100cc", "Engine"],
 		],
-		
+        		
 		"variables": [
 			["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
 			["$ffbstrength", "range", "", "Chassis", 1, 0.5, 2, "Force Feedback", "Scales the force feedback strength for this car", {"minDis":50, "maxDis":200}],
@@ -951,8 +951,8 @@
         {"hubBeamDeform":43600, "hubBeamStrength":78000},
 		
 		{"wheelOffset":-0.055},
-		["FR", "wheel_FR", "tire_FR", "41", "40", 9999, "41", -1, {"steerAxisUp:":"4","steerAxisDown:":"21"}],
-		["FL", "wheel_FL", "tire_FL", "113", "112", 9999, "113", 1,{"steerAxisUp:":"12","steerAxisDown:":"29"}],
+		["FR", "wheel_FR", "tire_FR", "41", "40", 9999, "41", 1, {"steerAxisUp:":"4","steerAxisDown:":"21"}],
+		["FL", "wheel_FL", "tire_FL", "113", "112", 9999, "113", -1,{"steerAxisUp:":"12","steerAxisDown:":"29"}],
 		{"pressurePSI":"$tirepressure_R"},
 		{"wheelSideBeamSpring":"$=$tirepressure_R*250","wheelSideBeamDamp":25},
 		{"wheelSideBeamSpringExpansion":155100,"wheelSideBeamDampExpansion":35},
@@ -984,13 +984,23 @@
 		
 
 		
-		["RR", "wheel_RR", "tire_RR", "01", "02", 9999, "116", -1,  {"speedo":true, "nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01",}],
-		{"brakeTorque":"$=$brakepressure*300"},
-        {"brakeInputSplit":1},
-        {"brakeSplitCoef":1},
-        {"parkingTorque":0},
-        {"brakeSpring":150},
-		["RL", "wheel_RL", "tire_RL", "114", "115", 9999, "116", 1, {"nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
+		["RR", "wheel_RR", "tire_RR", "01", "02", 9999, "116", -1,  {"speedo":true, "nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
+		{"brakeTorque":"$=$brakepressure*300"}, //Rate of brake torque (Nm) increase per input (input is 0 to 1). If there is no knee point, it also indicates the maximum brake torque.
+        {"brakeInputSplit":1}, //Creates a knee point in brake torque rate (value of 0.5 means knee occurs at half brake input)
+        {"brakeSplitCoef":1}, //Reduces or increases the brake torque rate after the knee point. Value of 0.5 means brake torque will rise at half the rate defined by brakeTorque.
+        {"parkingTorque":0}, //Maximum parking brake torque
+        {"brakeSpring":150}, //Stiffness of the brake system. Too high will make brake unstable, too low will cause wheel hop or rubber band effect.
+
+        //brake thermals
+        {"enableBrakeThermals":true},
+        // {"brakeDiameter":0.325}, //Diameter (m)
+        // {"brakeMass":8}, //Rotor mass (ignoring hub/bearing area) (kg)
+        {"brakeType":"disc"}, //Type ("drum", "disc", "vented-disc")
+        {"rotorMaterial":"steel"}, //Rotor material ("steel", "aluminum", "aluminium", "ceramic")
+        {"brakeVentingCoef":1}, //Cooling multiplier (1 for typical unducted brakes)
+        //brake sounds
+        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0},
+        ["RL", "wheel_RL", "tire_RL", "114", "115", 9999, "116", 1, {"nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
     ],
 	
 	"controller": [

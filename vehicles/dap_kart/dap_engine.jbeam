@@ -1,7 +1,7 @@
 {
     "dap_engine_100cc":{
         "information":{
-            "authors":"Kirbyguy22"   
+            "authors":"Kirbyguy22",
 			"name":"100cc Two-stroke Kart Engine",
         },
 		"slotType" : "dap_engine",
@@ -10,6 +10,11 @@
 			["type", "default", "description"]
 			["dap_powertrain","dap_powertrain_default", "Powertrain"],
 			["dap_speed_limiter","dap_speed_limiter_default", "Speed Limiter"],
+		],
+
+		"variables": [
+			["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+			["$engine_power", "range", "x", "Engine", 1, 1, 5, "Engine Power", "Engine Power Description"],
 		],
 
 		"powertrain": [
@@ -178,23 +183,23 @@
             "torque":[
                 ["rpm", "torque"]
                 [0,       0],
-                [500,    8],
-                [1000,  8],
-                [2000,  8],
-                [3000,  8],
-                [4000,  8],
-                [5000,  9],
-                [6000,  10],
-                [7000,  11],
-                [8000,   12],
-                [10000,   15],
-                [11000,   14],
-                [12000,   12],
-                [13000,   10],
-                [14000,   8],
-                [15000,   7],
-                [16000,   6],
-                [16100,   0]
+                [500, "$=$engine_power*8"],
+                [1000,  "$=$engine_power*8"],
+                [2000,  "$=$engine_power*8"],
+                [3000,  "$=$engine_power*8"],
+                [4000,  "$=$engine_power*8"],
+                [5000,  "$=$engine_power*9"],
+                [6000,  "$=$engine_power*10"],
+                [7000,  "$=$engine_power*11"],
+                [8000,   "$=$engine_power*12"],
+                [10000,   "$=$engine_power*15"],
+                [11000,   "$=$engine_power*14"],
+                [12000,   "$=$engine_power*12"],
+                [13000,   "$=$engine_power*10"],
+                [14000,   "$=$engine_power*8"],
+                [15000,   "$=$engine_power*7"],
+                [16000,   "$=$engine_power*6"],
+                [16100,   "$=$engine_power*0"]
             ],
      
             "engineBlock": {"[engineGroup]:":["engine_block"]},

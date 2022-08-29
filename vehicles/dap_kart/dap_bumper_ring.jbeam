@@ -48,33 +48,49 @@
 		//--Beams--
 		"beams": [    
 			["id1:", "id2:"],
-			{"beamSpring":421000,"beamDamp":10},
+			{"beamSpring":321000,"beamDamp":10},
 			{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 			{"disableMeshBreaking":true},
 			// flt
-			["2","bumper_ring_l9"],
-			["28","bumper_ring_l9"],
+			["2","bumper_ring_l5"],
+			["28","bumper_ring_l5"],
+			["2","bumper_ring_l1"],
+			["28","bumper_ring_l1"],
 			// flb
-			["2","bumper_ring_l8"],
-			["28","bumper_ring_l8"],
+			["2","bumper_ring_l4"],
+			["28","bumper_ring_l4"],
+			["2","bumper_ring_l0"],
+			["28","bumper_ring_l0"],
 			// frt
-			["8","bumper_ring_r11"],
-			["20","bumper_ring_r11"],
+			["8","bumper_ring_r7"],
+			["20","bumper_ring_r7"],
+			["8","bumper_ring_r3"],
+			["20","bumper_ring_r3"],
 			// frb
-			["8","bumper_ring_r10"],
-			["20","bumper_ring_r10"],
+			["8","bumper_ring_r6"],
+			["20","bumper_ring_r6"],
+			["8","bumper_ring_r2"],
+			["20","bumper_ring_r2"],
 			// rlt
-			["15","bumper_ring_l16"],
-			["32","bumper_ring_l16"],
+			["15","bumper_ring_l21"],
+			["32","bumper_ring_l21"],
+			["15","bumper_ring_l13"],
+			["32","bumper_ring_l13"],
 			// rlb
-			["15","bumper_ring_l17"],
-			["32","bumper_ring_l17"],
+			["15","bumper_ring_l20"],
+			["32","bumper_ring_l20"],
+			["15","bumper_ring_l12"],
+			["32","bumper_ring_l12"],
 			// rrt
-			["0","bumper_ring_r19"],
-			["17","bumper_ring_r19"],
+			["0","bumper_ring_r23"],
+			["17","bumper_ring_r23"],
+			["0","bumper_ring_r15"],
+			["17","bumper_ring_r15"],
 			// rrb
-			["0","bumper_ring_r18"],
-			["17","bumper_ring_r18"],
+			["0","bumper_ring_r22"],
+			["17","bumper_ring_r22"],
+			["0","bumper_ring_r14"],
+			["17","bumper_ring_r14"],
 
 
 			{"beamSpring":60000,"beamDamp":0},

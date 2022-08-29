@@ -2,26 +2,18 @@
     "dap_speed_limiter_default":{
         "information":{
             "authors":"skillor",
-			"name":"65 kmh Speed Limiter",
+			"name":"Speed Limiter",
         },
 		"slotType" : "dap_speed_limiter",
 
-		"mainEngine": {
-            "torque":[
-                ["rpm", "torque"]
-                [0,       0],
-                [500,    8],
-                [1000,  8],
-                [2000,  8],
-                [3000,  8],
-                [4000,  8],
-                [5000,  9],
-                [6000,  10],
-                [7000,  11],
-                [8000,   12],
-                [10000,   15],
-                [11000,   0],
-            ],
-        }
+        "variables": [
+			["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+			["$speed_limiter", "range", "km/h", "Transmission", 65, 30, 300, "Speed Limit", "Speed Limit"],
+		],
+
+        "vehicleController":
+		{
+            "topSpeedLimit": "$=$speed_limiter*0.277",
+		},
     },
 }
