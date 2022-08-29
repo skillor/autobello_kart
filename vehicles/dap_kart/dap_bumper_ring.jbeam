@@ -48,7 +48,7 @@
 		//--Beams--
 		"beams": [    
 			["id1:", "id2:"],
-			{"beamSpring":321000,"beamDamp":10},
+			{"beamSpring":321000,"beamDamp":20},
 			{"beamDeform":"FLT_MAX","beamStrength":"FLT_MAX"},
 			{"disableMeshBreaking":true},
 			// flt
