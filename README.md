@@ -4,8 +4,8 @@
 
 ## Configurations
 
-- Formula Kart
+### Formula Kart
 <img src="vehicles/dap_kart/dap_kart.png" width="500">
 
-- Ticket Kart
+### Ticket Kart
 <img src="vehicles/dap_kart/ticket_kart.png" width="500">
