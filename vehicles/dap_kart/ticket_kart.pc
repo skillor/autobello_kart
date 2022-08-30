@@ -1,5 +1,6 @@
 {
   "format":2,
+  "licenseName":"Skillor",
   "model":"dap_kart",
   "paints":[
     {
@@ -40,14 +41,14 @@
     }
   ],
   "parts":{
-    "dap_bumper_ring":"",
+    "dap_bumper_ring":"dap_bumper_ring",
     "dap_engine":"dap_engine_100cc",
-    "dap_flag_pole":"",
+    "dap_flag_pole":"dap_flag_pole",
     "dap_fuel":"dap_fuel",
     "dap_kart_chassis":"dap_kart_chassis",
-    "dap_powertrain":"dap_powertrain_realistic",
+    "dap_powertrain":"dap_powertrain_default",
     "dap_seat":"dap_seat",
-    "dap_speed_limiter":"",
+    "dap_speed_limiter":"dap_speed_limiter_default",
     "dap_wheels":"dap_wheels"
   }
 }
