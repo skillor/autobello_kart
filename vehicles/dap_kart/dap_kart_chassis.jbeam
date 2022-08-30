@@ -14,6 +14,7 @@
 			["dap_bumper_ring","dap_bumper_ring", "Bumper Ring" , {"nodeOffset":{"x":0, "y":0, "z":0.04}}],
 			["dap_fuel","dap_fuel", "Fuel Tank"],
 			["dap_engine", "dap_engine_100cc", "Engine"],
+			["dap_wheels", "dap_wheels", "Wheels"],
 		],
         		
 		"variables": [
@@ -32,10 +33,6 @@
 			["rear_bar", ["frame"], [],{"rot":{"x":0, "y":0, "z":0}}],	
 			["skidplate_mid", ["frame"], [],{"rot":{"x":0, "y":0, "z":0}}],
 			["skidplate_f", ["frame"], [],{"rot":{"x":0, "y":0, "z":0}}],
-			["rim_fl", ["wheel_FL"], [], {"pos":{"x":0.476, "y":-0.45660, "z":0.13460}, "rot":{"x":0, "y":0, "z":0}}],
-			["rim_fr", ["wheel_FR"], [], {"pos":{"x":-0.476, "y":-0.45660, "z":0.13460}, "rot":{"x":0, "y":0, "z":0}}],
-			["rim_rl", ["wheel_RL"], [], {"pos":{"x":0.495, "y":0.60810, "z":0.10710}, "rot":{"x":0, "y":0, "z":0}}],
-			["rim_rr", ["wheel_RR"], [], {"pos":{"x":-0.495, "y":0.60810, "z":0.10710}, "rot":{"x":0, "y":0, "z":0}}],
 			["Cylinder003", ["wheel_FL","tire_FL"], [], {"pos":{"x":0.476, "y":-0.45660, "z":0.13460}}],
 			["Cylinder003", ["wheel_FR","tire_FR"], [], {"pos":{"x":-0.476, "y":-0.45660, "z":0.13460}}],
 			["Cylinder004", ["wheel_RL","tire_RL"], [], {"pos":{"x":0.495, "y":0.60810, "z":0.10710}}],
@@ -863,142 +860,6 @@
        ["axlerr", "live_axle", "ref0","ref1","ref2", {"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0, "z":0}, -360, 360, 0, 1, {"baseTranslation":{"x":0,"y":0.60815,"z":-0.068}}],
        ["axlerr", "brake_disc", "ref0","ref1","ref2", {"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":0.27968,"y":0.60815,"z":-0.068}}],
        ["axlerr", "sprocket", "ref0","ref1","ref2", {"x":0, "y":0, "z":0}, {"x":1, "y":0, "z":0}     , {"x":0, "y":0, "z":0}, -360, 360, 0, 1,{"baseTranslation":{"x":-0.35077,"y":0.60815,"z":-0.068}}],
-    ],
-		
-	"pressureWheels": [
-        ["name","hubGroup","group","node1:","node2:","nodeS","nodeArm:","wheelDir"],
-		//{"axleBeams":["axle_FR"]},
-        {"disableMeshBreaking":false,"disableHubMeshBreaking":false},
-		{"selfCollision":false},
-        {"hasTire":true},
-        {"enableTireReinfBeams":false},
-        {"enableTireLbeams":true},
-        {"enableTireSideReinfBeams":false},
-        {"enableTreadReinfBeams":true},
-        {"enableTirePeripheryReinfBeams":false},
-		//{"stribeckExponent":2},
-		//{"stribeckVelMult":2},
-
-        //general settings
-		{"numRays":12},
-        {"radius":0.122},
-		{"hubWidth":0.115},
-        {"tireWidth":0.11},
-		{"hubRadius":0.072},
-//        {"nodeWeight":0.105},
-//		{"hubNodeWeight":0.35},
-        {"nodeWeight":0.06},
-		{"hubNodeWeight":0.08},
-        //tire options
-        {"wheelSideBeamSpring":"$=$tirepressure_F*250","wheelSideBeamDamp":25},
-        {"wheelSideBeamSpringExpansion":65100,"wheelSideBeamDampExpansion":35},
-        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
-        //{"wheelSideReinfBeamSpringExpansion":125100,"wheelSideReinfBeamDampExpansion":15},
-		
-        {"wheelReinfBeamSpring":16000,"wheelReinfBeamDamp":60},
-        {"wheelReinfBeamDampCutoffHz":500,"wheelReinfBeamPrecompression":1},
-
-        {"wheelTreadBeamSpring":25000,"wheelTreadBeamDamp":55},
-        {"wheelTreadBeamDampCutoffHz":500,"wheelTreadBeamPrecompression":0.99},
-
-        {"wheelTreadReinfBeamSpring":25000,"wheelTreadReinfBeamDamp":55},
-        {"wheelTreadReinfBeamDampCutoffHz":500,"wheelTreadReinfBeamPrecompression":0.99},
-
-        {"wheelPeripheryBeamSpring":12200,"wheelPeripheryBeamDamp":25},
-        {"wheelPeripheryBeamDampCutoffHz":500,"wheelPeripheryBeamPrecompression":0.98},
-
-        {"wheelPeripheryReinfBeamSpring":12200,"wheelPeripheryReinfBeamDamp":25},
-        {"wheelPeripheryReinfBeamDampCutoffHz":500,"wheelPeripheryReinfBeamPrecompression":1.02},
-
-        //general tire values
-
-        {"nodeMaterial":"|NM_RUBBER"},
-        {"triangleCollision":false},
-        {"pressurePSI":"$tirepressure_F"},
-        {"dragCoef":5},
-
-        //groundmodel friction multipliers
-        {"frictionCoef":1.0},
-        {"slidingFrictionCoef":0.94},
-        {"treadCoef":0},
-
-        //advanced friction values
-        //{"noLoadCoef":2.44},
-        //{"loadSensitivitySlope":0.00092}
-        //{"fullLoadCoef":2.0},
-        //{"softnessCoef":1},
-		
-        //advanced friction values
-        {"noLoadCoef":1.98},
-        {"loadSensitivitySlope":0.00044}
-        {"fullLoadCoef":1.46},
-        {"softnessCoef":1},
-		
-
-        //deform values
-        {"wheelSideBeamDeform":11000,"wheelSideBeamStrength":15000},
-        {"wheelReinfBeamDeform":101000,"wheelReinfBeamStrength":101000},
-        {"wheelTreadBeamDeform":10000,"wheelTreadBeamStrength":13000},
-        {"wheelTreadReinfBeamDeform":10000,"wheelTreadReinfBeamStrength":13000},
-        {"wheelPeripheryBeamDeform":101000,"wheelPeripheryBeamStrength":101000},
-		
-		//hubG
-		{"hubTreadBeamSpring":120100, "hubTreadBeamDamp":6},
-        {"hubPeripheryBeamSpring":120100, "hubPeripheryBeamDamp":6},
-        {"hubSideBeamSpring":310100, "hubSideBeamDamp":6},
-        {"hubNodeMaterial":"|NM_METAL"},
-        {"hubFrictionCoef":0.5},
-        {"hubBeamDeform":43600, "hubBeamStrength":78000},
-		
-		{"wheelOffset":-0.055},
-		["FR", "wheel_FR", "tire_FR", "41", "40", 9999, "41", 1, {"steerAxisUp:":"4","steerAxisDown:":"21"}],
-		["FL", "wheel_FL", "tire_FL", "113", "112", 9999, "113", -1,{"steerAxisUp:":"12","steerAxisDown:":"29"}],
-		{"pressurePSI":"$tirepressure_R"},
-		{"wheelSideBeamSpring":"$=$tirepressure_R*250","wheelSideBeamDamp":25},
-		{"wheelSideBeamSpringExpansion":155100,"wheelSideBeamDampExpansion":35},
-        {"wheelSideTransitionZone":0.1,"wheelSideBeamPrecompression":0.99},
-		
-		{"wheelOffset":0.06},
-        {"radius":0.132},
-		{"hubWidth":0.205},
-		{"tireWidth":0.195},
-        {"nodeWeight":0.07},
-		{"hubNodeWeight":0.09},
-		
-        //groundmodel friction multipliers
-        {"frictionCoef":1.1},
-        {"slidingFrictionCoef":1.05},
-        {"treadCoef":0},
-
-        //advanced friction values
-        //{"noLoadCoef":2.50},
-       // {"loadSensitivitySlope":0.0009}
-       // {"fullLoadCoef":2.2},
-        //{"softnessCoef":1},
-		
-        //advanced friction values
-        {"noLoadCoef":2.00},
-        {"loadSensitivitySlope":0.00032}
-        {"fullLoadCoef":1.55},
-        {"softnessCoef":1},
-		
-		{"brakeTorque":"$=$brakepressure*150"}, //Rate of brake torque (Nm) increase per input (input is 0 to 1). If there is no knee point, it also indicates the maximum brake torque.
-        {"brakeInputSplit":1}, //Creates a knee point in brake torque rate (value of 0.5 means knee occurs at half brake input)
-        {"brakeSplitCoef":1}, //Reduces or increases the brake torque rate after the knee point. Value of 0.5 means brake torque will rise at half the rate defined by brakeTorque.
-        {"parkingTorque":0}, //Maximum parking brake torque
-        {"brakeSpring":150}, //Stiffness of the brake system. Too high will make brake unstable, too low will cause wheel hop or rubber band effect.
-
-        //brake thermals
-        {"enableBrakeThermals":true},
-        // {"brakeDiameter":0.325}, //Diameter (m)
-        // {"brakeMass":8}, //Rotor mass (ignoring hub/bearing area) (kg)
-        {"brakeType":"disc"}, //Type ("drum", "disc", "vented-disc")
-        {"rotorMaterial":"steel"}, //Rotor material ("steel", "aluminum", "aluminium", "ceramic")
-        {"brakeVentingCoef":1}, //Cooling multiplier (1 for typical unducted brakes)
-        //brake sounds
-        {"squealCoefNatural": 0.0, "squealCoefLowSpeed": 0.0},
-        ["RR", "wheel_RR", "tire_RR", "01", "02", 9999, "00", -1,  {"speedo":true, "nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
-        ["RL", "wheel_RL", "tire_RL", "114", "115", 9999, "116", 1, {"nodeCoupling:":"114","torqueArm:":"eng2", "torqueCoupling:":"01"}],
     ],
 	
 	"controller": [
