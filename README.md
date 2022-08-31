@@ -2,6 +2,8 @@
 
 ## [Download Mod](https://github.com/skillor/autobello_kart/releases/latest/download/autobello_kart.zip)
 
+![Download Count](https://img.shields.io/github/downloads/skillor/autobello_kart/total.svg)
+
 ## Configurations
 
 ### Formula Kart
