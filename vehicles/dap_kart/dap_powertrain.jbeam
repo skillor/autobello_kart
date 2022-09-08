@@ -6,6 +6,11 @@
         },
 		"slotType" : "dap_powertrain",
 
+        "slots": [
+			["type", "default", "description"]
+			["dap_transmission","dap_transmission_no_gears", "Transmission"],
+		],
+
 		"powertrain" : [
             ["type", "name", "inputName", "inputIndex"],
             ["frictionClutch", "clutch", "mainEngine", 1],
@@ -16,12 +21,6 @@
             ["shaft", "myAxleShaft2", "myRearDiff", 2, {"connectedWheel":"RR", "electricsName":"axlerr"}]
         ],
 
-        "gearbox": {
-            //https://wiki.beamng.com/ManualGearbox
-            //"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
-			"gearRatios":[-1, 0, 1],
-			"friction": 0, //Constant friction torque on input shaft
-		},
         "clutch": {
             //"thermalsEnabled":true
             //"clutchMass":10, //Thermal mass representing clutch disc and PP/Clutch surfaces

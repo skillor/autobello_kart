@@ -1,0 +1,39 @@
+{
+    "dap_transmission_no_gears":{
+        "information":{
+            "authors":"skillor",
+			"name":"1 Gear"
+        },
+		"slotType" : "dap_transmission",
+
+        "gearbox": {
+            //https://wiki.beamng.com/ManualGearbox
+            //"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
+			"gearRatios":[-1, 0, 1],
+			"friction": 0 //Constant friction torque on input shaft
+		},
+    },
+
+    "dap_transmission_3_gears":{
+        "information":{
+            "authors":"skillor",
+			"name":"3 Gear"
+        },
+		"slotType" : "dap_transmission",
+
+        "variables": [
+			["name", "type", "unit", "category", "default", "min", "max", "title", "description"],
+			["$gear_1_ratio", "range", "x", "Gearbox", 4, 0.1, 20, "Gear 1 Ratio", "Gear 1 Ratio"],
+			["$gear_2_ratio", "range", "x", "Gearbox", 2, 0.1, 20, "Gear 2 Ratio", "Gear 2 Ratio"],
+			["$gear_3_ratio", "range", "x", "Gearbox", 1, 0.1, 20, "Gear 2 Ratio", "Gear 3 Ratio"],
+			["$gear_-1_ratio", "range", "x", "Gearbox", -1, -20, -0.1, "Reverse Gear Ratio", "Reverse Gear Ratio"],
+		],
+
+        "gearbox": {
+            //https://wiki.beamng.com/ManualGearbox
+            //"gearDamageThreshold":3000, //Multiplier for tolerance to smashing gears (no clutch + mismatched rpm)
+			"gearRatios":["$gear_-1_ratio", 0, "$gear_1_ratio", "$gear_2_ratio", "$gear_3_ratio"],
+			"friction": 0 //Constant friction torque on input shaft
+		},
+    }
+}
